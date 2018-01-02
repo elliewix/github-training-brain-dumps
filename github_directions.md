@@ -27,6 +27,8 @@ At a mimimum, version control for programming means that you can:
 
 GitHub uses the git version control system and has added specialized tools on top of it.  
 
+Here's the example repository that you'll be creating as we go through this lesson: https://github.com/elliewix/jupyter-rr-demo-repo.  Take some time to look through the commits and files.
+
 ## Getting started with GitHub
 
 Now that you know a little about what this is about, we can start stepping through the process.
@@ -244,4 +246,85 @@ for i in range(10):
     The light is green
     The light is yellow
 
-Now go back to GitHub desktop.  Click back into the Changes tab if you need.  Once again you'll see your demo.ipynb is in there, but instead of a greed + you can see an orange/yellow dot icon.  This indicates that you have a file change.  
+Now go back to GitHub desktop.  Click back into the Changes tab if you need.  Once again you'll see your demo.ipynb is in there, but instead of a greed + you can see an orange/yellow dot icon.  This indicates that you have a file change.  Click on that file name to see the changes you made.  Again, this raw code wasn't really meant for human eyes, but you should roughly see what you added in there.
+
+Add another commit message, "adding demo code", and commit to master.
+
+Now that we have a few commits stacked up, we can think about pushing our changes back to github.  Remember that these local commits are purely local to our machine, GitHub won't know about them unless we tell it about them.
+
+On Macs, you should see a large button that says "Push origin" (and some other metadata".  On Windows, you will only see a "Sync" button.
+
+In this case, it should also have a 2 with an up arrow, indicating that there are 2 commits to push. 
+
+(Note:  if you created the repository locally only and not on the website, you'll see that it says "Publish reposotory".)
+
+Click that button (Push for Macs and Sync for windows).  This will go through the process of uploading everything to the GitHub website.
+
+Now, go back to your GitHub webpage for this repository and reload the page.  You'll see that there are some new files in there, along with your commit messages.
+
+Click on your Jupyter Notebook and inspect the rendered contents.  It does a pretty good job of it!
+
+## Pulling a change to your local machine from the website
+
+Now we know how to make changes on the website and locally, and them make them match up.  You may be wondering why someone would want to edit on the website.  Usually these are times when it is very convevient to, or you don't have access to nice Markdown previews.  For example, you may have discovered a typo that would be faster to fix in the website than launching your local instance of.  Or you may not be working on your computer with the local copies, so you can make the edits without having to install anything.
+
+Go into your readme file on the website and launch the edit mode.  Remember that you do this by clicking on the name of the file and then the pencil icon.
+
+Add something silly.
+
+Acivity:
+
+Take 5 minutes to write a silly joke (like a bad python pun) in your readme file.  Commit it into master using the website.
+
+Example:
+
+```
+# jupyter-rr-demo-repo
+Demo repo for writing github directions
+
+I will be adding more to this repository as we learn about more features.
+
+Why did the snake cross the road?  It hoped to put an arterial road between it and Python 2.
+```
+
+Now go back into your GitHub Desktop and look at the button you just used to push/sync.  Macs might say now "Fetch origin" and Windows likely says (TODO: IDK) sync.  Click that button.
+
+On macs, the button changes to say "Pull origin" and windows it should still say "Sync".  Only now it should have a down arrow and a 1.  This means that there is one commit to pull in (download) to your local version from the website.  
+
+Click it again to pull that change in.  Once done, it should go back to saying "Fetch origin" or "Sync" with no numbers.
+
+Now go into the history tab and you can see the silly joke that you added in.
+
+## Reverting a change
+
+Let's say this is now the next day and your advisor or dean wants to see your wonderful repository with the latest version of your work.  You are now rethinking your choice of having a silly joke there and want to revert that change.  
+
+Go into your History tab and find the commit where you are adding the silly joke.  This should be the first one.  Right click on that change and select "Revert this commmit".  You'll see a new entry in the commit log where it has alread committed it for you.
+
+Now open the readme file with a text editor.  You should see the offending joke is now gone.
+
+Go ahead and push this change to GitHub, reload the repository page, and confirm that it is now gone.
+
+## Recovering from destruction
+
+So we've seen how to revert a commit that we've made, let's look at how you can recover lost work.
+
+Go back into your Jupyter Notebook and use the "cut" button (the scissors icon) to delete all the cells in your notebook.  
+
+Now save it! See how there's no undo for this? Oh no!  
+
+But not oh no!
+
+Go check things out in GitHub Desktop.  You can see that your file is showing up as changed and all the cells in pink/red are deletions.  You can get rid of these changes.  
+
+Right click on the change in the Changes tab and select "Discard Changes".  You'll want to do this to the checkpoints file as well if that's being tracked.
+
+Now go back to your Jupyter Notebook and reload the page.  You'll see that your work is now returned to you.
+
+Activity 5 minutes:
+
+Use your file browser to delete (drag them to the trash) all the files inside your repository folder (but not the folder itself).  Use the discard changes feature to restore all the files.  Mac users, you may see a `.DS_store` file show up.  You can safely add that to your ignored files.
+
+Activity 5 minutes:  
+
+Delete the entire folder from your computer and recloan the repository to your computer.  Hint: github destop will prompt you to reclone it.
