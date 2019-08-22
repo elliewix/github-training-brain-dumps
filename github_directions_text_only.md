@@ -57,7 +57,7 @@ Step through this process together as a class.
 2. On the upper right hand corner of the page you'll see a + (plus) icon.  Click that + and select "New repository"
 3. This will take you to a form where you'll add some information about your repository.
 4. You'll need to add the following things:
-	1. Repository name: your repository name should be something short but descriptive. You might want to name yours `rr-workshop-test-repo`.  Do not include any spaces in your repository name.
+	1. Repository name: your repository name should be something short but descriptive. You might want to name yours `workshop-test-repo`.  Do not include any spaces in your repository name.
 	2. Description:  a sentence or two about what your repository will contain.  You might say "My test repository for the Reproducible Research workshop."
 	3. Decide if you want to make your repository public or private.  You should be able to leave it as public for this workshop, but you can choose Private to make it viewable only to you and others that you invite.  Private repositories are part of a paid account, but are free (at the time of writing) with the student developer pack.
 	4. Add a check next to "Initialize this repository with a README"
@@ -81,7 +81,7 @@ Back in the file section, click on the `README.md` link.  This should take you t
 The screen will change to show the raw text behind the page (remember that we were seeing the rendered version), but you can also edit it!  Your text will look something like:
 
 ```
-# jupyter-rr-demo-repo
+# workshop-test-repo
 Demo repo for writing github directions
 ```
 
@@ -90,7 +90,7 @@ The name of your repository is what will appear after the `#` and the descriptio
 Let's add some additional text to the end.
 
 ```
-# jupyter-rr-demo-repo
+# workshop-test-repo
 Demo repo for writing github directions
 
 I will be adding more to this repository as we learn about more features.
@@ -134,7 +134,7 @@ You'll find your own comfort space, and there's nothing wrong with using either 
 
 This is a free application that is made by GitHub.  You can download it here:  [https://desktop.github.com/](https://desktop.github.com/).  
 
-Once you download it, open the installer and follow all the normal installation methods.  Mac users, you'll need to drag the application to your Applications folder, and Windows users you should be able to follow all the exe direction.
+Once you download it, open the installer and follow all the normal installation methods.  Mac users, you'll need to drag the application to your Applications folder, and Windows users you should be able to follow all the exe directions.
 
 After installing, go ahead and open it.  There are some major differences between the Windows and Mac versions, so there will be notes about each as we go along.  The biggest difference will be where you access menu items.  Mac users will have them at the top of the screen as normal.  Windows users will have a gear on the upper right of the screen.  There will also be differences in what things are called, e.g. Finder vs Explorer.
 
@@ -143,8 +143,6 @@ After installing, go ahead and open it.  There are some major differences betwee
 Upon first opening it, Windows versions will go ahead and prompt you to log it.  
 
 Unsure if macs do.
-
-TODO:  this needs to be tested on a fresh install,
 
 Directions for logging in from the regular GUI:
 
@@ -175,7 +173,7 @@ The interface is now a bit more interesting because you have a repository.  On t
 
 If you can't find this window, you can go up to View and select Show Repositories List.
 
-Right now you may only see the one we just cloned, `jupyter-rr-demo-repo`.  Click on the name to go into that repository's view.
+Right now you may only see the one we just cloned, `workshop-test-repo`.  Click on the name to go into that repository's view.
 
 You can always use normal file navigation to find the folder that was just made, but there's a nice selection of shortcuts within the application.  THese are in different spots depending on your OS.
 
@@ -184,29 +182,23 @@ You can always use normal file navigation to find the folder that was just made,
 
 This will take you directly to your local folder for this repository.
 
-## Make a Jupyter Notebook in your directory
-
-We're now going to launch a Jupyter Notebook instance and save a notebook in this directory.  
+## Make a markdown file in your directory
 
 This folder is another directory on your computer, so if you're already comfortable with changing directories in your command line, you can do so.  However, we can also use another shortcut of the application.
 
-Navigate back to the Repositories menu where we just were (Repositories at the top or the gear icon at the left).  This time, select Open in Finder for Macs or Open in Git Shell for windows.
+Navigate back to the Repositories menu where we just were (Repositories at the top or the gear icon at the left).  This time, select Open in Finder for Macs or Open in Explorer for windows. 
 
-This will open up a shell prompt already inside this directory.  Type in `jupyter notebook` to launch the service in that directiory.  (NOTE: this is presuming you have a standard installation.  You should follow your normal start routine here if you have something that differs.  
+We're now going to create a markdown file on your computer and work on editing that. You can use any plain text editor (Sublime, atom, notepad++, textwrangler, etc.) to create this file.  You can create these files like creating any plain text file, but giving it a `.md` extension instead of `.txt`.  You'll edit it like any normal text file, but this allows markdown syntax to be rendered by an application that is aware of it.
 
-TODO: does this work on windows? some screen shots I see show Open in Git Shell, so does jupyter notebook work here?
+Create this file and add a bit of text. Doesn't matter what, you could type "hello" or something in there.
 
-Once the Jupyter host has started up, launch a Python 3 notebook as normal.  Name this file (by clicking on the "Untitled" at the top) "demo".
-
-Pop back into your GitHub desktop and you should see a bunch of green code in the code window, and some new files.  You can tell that these are new files because there is a big green + sign next to them.
-
-Take a moment to look at the file preview in comparison to how the rendered Jupyter Notebook looks like.  Remember that, like Markdown, Jupyter Notebooks are plain text JSON files that tell the sevice how to render them.  So when you look at the raw contents, it can be very hard to tell what's going on.  Markdown is a bit more readable (and is why most of us write directly inside of Markdown) but Jupyter Notebooks aren't disigned to have pretty 'human readable' code inside.
+Pop back into your GitHub desktop and you should see a bunch of green code in the code window, and some new files.  You can tell that these are new files because there is a big green `+` sign next to them.
 
 ### Commit the empty file
 
-Let's commit this empty version of the file to our local repository.  Our changes are being saved to our `ipynb` files as we edit them, but this will check in this change to our repository information.  
+Let's commit this empty version of the file to our local repository.  Our changes are being saved to our text files as we edit them and save in the program (some will save automatically for you), but this will check in this change to our repository information.  
 
-Go into GitHub Desktop and in the Changes panel you'll see two text boxes like you saw in the website version.  The first short one is your required commit message and the longer second one is the optional description area.  Add a commit message like "Adding empty jupyter notebook" and click "commit to master".
+Go into GitHub Desktop and in the Changes panel you'll see two text boxes like you saw in the website version.  The first short one is your required commit message and the longer second one is the optional description area.  Add a commit message like "Adding new text file" and click "commit to master".
 
 You can now click back into the History tab and see your commit there.
 
@@ -214,43 +206,13 @@ You can now click back into the History tab and see your commit there.
 
 We're now going to add some content and commit that in.
 
-Activity:
+> Activity:
+> 
+> Take 5 minutes and write some silly jokes or something into your text file.
 
-Take 5 minutes and write some silly Python code in your Jupyter Notebook.  Add some Markdown cells explaining what that silly code does.
+Now go back to GitHub desktop.  Click back into the Changes tab if you need.  Once again you'll see your text file is in there, but instead of a green `+` you can see an orange/yellow dot icon.  This indicates that you have a file change (as opposed to an addition).  Click on that file name to see the changes you made. 
 
-Example:
-
-(markdown cell)  This makes the worst traffic light results.
-
-```python
-import random
-```
-
-
-```python
-colors = ['red', 'green', 'yellow']
-
-def traffic_light():
-    return random.choice(colors)
-
-for i in range(10):
-    print("The light is", traffic_light())
-```
-
-    The light is red
-    The light is yellow
-    The light is red
-    The light is yellow
-    The light is red
-    The light is green
-    The light is green
-    The light is red
-    The light is green
-    The light is yellow
-
-Now go back to GitHub desktop.  Click back into the Changes tab if you need.  Once again you'll see your demo.ipynb is in there, but instead of a greed + you can see an orange/yellow dot icon.  This indicates that you have a file change.  Click on that file name to see the changes you made.  Again, this raw code wasn't really meant for human eyes, but you should roughly see what you added in there.
-
-Add another commit message, "adding demo code", and commit to master.
+Add another commit message, "adding a funny joke", and commit to master.
 
 Now that we have a few commits stacked up, we can think about pushing our changes back to github.  Remember that these local commits are purely local to our machine, GitHub won't know about them unless we tell it about them.
 
@@ -264,30 +226,30 @@ Click that button (Push for Macs and Sync for windows).  This will go through th
 
 Now, go back to your GitHub webpage for this repository and reload the page.  You'll see that there are some new files in there, along with your commit messages.
 
-Click on your Jupyter Notebook and inspect the rendered contents.  It does a pretty good job of it!
+Click on your markdown file and inspect the rendered contents.  It does a pretty good job of it!
 
 ## Pulling a change to your local machine from the website
 
 Now we know how to make changes on the website and locally, and them make them match up.  You may be wondering why someone would want to edit on the website.  Usually these are times when it is very convevient to, or you don't have access to nice Markdown previews.  For example, you may have discovered a typo that would be faster to fix in the website than launching your local instance of.  Or you may not be working on your computer with the local copies, so you can make the edits without having to install anything.
 
-Go into your readme file on the website and launch the edit mode.  Remember that you do this by clicking on the name of the file and then the pencil icon.
+Go into your readme.md file on the website and launch the edit mode.  Remember that you do this by clicking on the name of the file and then the pencil icon.
 
 Add something silly.
 
-Acivity:
-
-Take 5 minutes to write a silly joke (like a bad python pun) in your readme file.  Commit it into master using the website.
-
-Example:
-
-```
-# jupyter-rr-demo-repo
-Demo repo for writing github directions
-
-I will be adding more to this repository as we learn about more features.
-
-Why did the snake cross the road?  It hoped to put an arterial road between it and Python 2.
-```
+> Activity:
+> 
+> Take 5 minutes to write a silly joke (like a bad python pun) in your readme file.  Commit it into master using the website.
+> 
+> Example:
+> 
+> ```
+> # workshop-test-repo
+> Demo repo for writing github directions
+> 
+> I will be adding more to this repository as we learn about more features.
+> 
+> Why did the snake cross the road?  It hoped to put an arterial road between it and Python 2.
+> ```
 
 Now go back into your GitHub Desktop and look at the button you just used to push/sync.  Macs might say now "Fetch origin" and Windows likely says (TODO: IDK) sync.  Click that button.
 
@@ -311,22 +273,20 @@ Go ahead and push this change to GitHub, reload the repository page, and confirm
 
 So we've seen how to revert a commit that we've made, let's look at how you can recover lost work.
 
-Go back into your Jupyter Notebook and use the "cut" button (the scissors icon) to delete all the cells in your notebook.  
+Go back into your markdown file that you created and use the "cut" button (the scissors icon) and delete all the text that you put in there.
 
-Now save it! See how there's no undo for this? Oh no!  
-
-But not oh no!
+Sometimes application's don't have undo. You may have been doing this within `nano` or another command line application and you used the wrong keyboard shortcut that deleted everything. So let's pretend that you cannot undo things within your text editor. (just so we can avoid messing with that and focus on using a regular program 
 
 Go check things out in GitHub Desktop.  You can see that your file is showing up as changed and all the cells in pink/red are deletions.  You can get rid of these changes.  
 
 Right click on the change in the Changes tab and select "Discard Changes".  You'll want to do this to the checkpoints file as well if that's being tracked.
 
-Now go back to your Jupyter Notebook and reload the page.  You'll see that your work is now returned to you.
+Now go back to your markdown file and reopen it.  You'll see that your work is now returned to you.
 
-Activity 5 minutes:
+> Activity 5 minutes:
+> 
+> Use your file browser to delete (drag them to the trash) all the files inside your repository folder (but not the folder itself).  Use the discard changes feature to restore all the files.  Mac users, you may see a `.DS_store` file show up.  You can safely add that to your ignored files.
 
-Use your file browser to delete (drag them to the trash) all the files inside your repository folder (but not the folder itself).  Use the discard changes feature to restore all the files.  Mac users, you may see a `.DS_store` file show up.  You can safely add that to your ignored files.
-
-Activity 5 minutes:  
-
-Delete the entire folder from your computer and recloan the repository to your computer.  Hint: github destop will prompt you to reclone it.
+> Activity 5 minutes:  
+> 
+> Delete the entire folder from your computer and recloan the repository to your computer.  Hint: github destop will prompt you to reclone it.
