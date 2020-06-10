@@ -1,1 +1,1 @@
-# github training brain dumps
+# GitHub Training Modules
