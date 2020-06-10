@@ -1,4 +1,4 @@
-# Getting started with GitHub
+# Getting started with GitHub (for text documents)
 
 ## What is GitHub?
 
